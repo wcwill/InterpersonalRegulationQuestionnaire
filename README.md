@@ -1,4 +1,5 @@
 # Interpersonal Regulation Questionnaire (IRQ)
 
+This repository contains the Interpersonal Regulation Questionnaire (IRQ) and materials for the following paper:
 
-Repository for the Interpersonal Regulation Questionnaire and paper "Interpersonal emotion regulation: Implications for affiliation, perceived support, relationships, and well-being" (Williams, Morelli, Ong, &amp; Zaki, IN PRESS at Journal of Personality and Social Psychology)
+Williams, W.C., Morelli, S.A., Ong, D.C., & Zaki, J. (in press). Interpersonal emotion regulation: Implications for affiliation, perceived support, relationships, and well-being. <i>Journal of Personality and Social Psychology.</i>
