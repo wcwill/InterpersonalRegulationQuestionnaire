@@ -1,0 +1,938 @@
+<!-- Code for IRQ_TN predictive validity task -->
+
+<html>
+	<head>
+		<title> IRQ preval TN </title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+		<script src="http://longouyang.github.com/mmturkey/mmturkey.js"></script>
+
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body>
+	 
+
+		<div class="slide" id="start">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+  		
+  			<p class="block-text">
+  				Welcome to the experiment! Today you'll respond to stimuli and answer questions in this short study. 
+			</p>
+
+  			<p class="block-text">
+				Please note that you will be compensated for completing this HIT only <b><u>ONCE.</b></u> You will <b><u>NOT</b></u> be paid for additional HITs.
+			</p>
+
+  			<button type="button" id = "next" onclick="this.blur(); if (checkPreview()){taskSection.instructions1();}">Continue</button>
+
+	  		<p class="block-text" id="legal">Legal information: By answering the
+		    following questions, you are participating in a study being performed by
+		    cognitive scientists in the Stanford Department of Psychology. If you have
+		    questions about this research, please contact Craig Williams at <a
+		    href="mailto://wcwill@stanford.edu">wcwill@stanford.edu</a> or Jamil Zaki 
+		    at jzaki@stanford.edu. 
+		    You must be  at least 18 years old to participate. Your participation in this research is voluntary. 
+		    You may decline to answer any or all of the following questions. You may decline
+		    further participation, at any time, without adverse consequences. Your
+		    anonymity is assured; the researchers who have requested your
+		    participation will not receive any personal information about you.</p>
+
+
+	    </div>	 
+
+
+		<div class="slide" id="instructions1">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+  			<p class="block-text">
+  				Welcome to the experiment! In this task, you'll view a series of images and rate how unpleasant you find them from <b>1</b> (Not at all) to <b>4</b> (Unpleasant) to <b>7</b> (Extremely unpleasant).
+  			</p>
+
+
+			<p class="block-text">
+  				You'll provide your responses by pressing the number keys <b><u>at the top of your keyboard</b></u> when prompted.
+  			</p>
+
+  			<button type="button" onclick="this.blur(); taskSection.instructions2()">Next</button>
+
+	    </div>	 
+
+
+		<div class="slide" id="instructions2">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+  				Please provide your response once the image appears. You will have an unlimited amount of time to respond.
+			</p> 
+
+			<p class="block-text">
+  				Please pay close attention to these images as we may ask you about them later.
+			</p> 
+
+  			<button type="button" onclick="this.blur(); taskSection.instructions3()">Next</button>
+
+	    </div>	
+
+
+		<div class="slide" id="instructions3">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				Please pay close attention to each image and respond naturally, allowing yourself to experience whatever feelings the image would normally evoke in you.
+			</p>
+
+			<p class="block-text">
+				As a reminder, you'll rate how unpleasant you find each image from <b>1</b> (Not at all) to <b>4</b> (Unpleasant) to <b>7</b> (Extremely unpleasant) by pressing the number keys <b><u>at the top of your keyboard</b></u> when prompted.
+			</p>
+
+  			<button type="button" onclick="this.blur(); taskSection.instructions4()">Next</button>
+
+	    </div>	
+
+
+		<div class="slide" id="instructions4">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				The experiment has two phases. The first phase consists of 20 images and the second phase consists of 40 images. We will also ask you a series of questions after the second phase.
+			</p> 
+
+			<p class="block-text">
+				Press next when you are ready to begin.
+			</p>
+
+  			<button type="button" onclick="this.blur(); taskSection.next()">Next</button>
+
+	    </div>	
+
+
+	    <div class="slide" id="stage">
+
+	    	<div class="nstim">
+	    	</div>
+		
+  			<p id = "nElement" align="center">
+	  				{{}}
+  			</p>
+			<img id="imageElement" src="" height = "75%" align="middle"></img> 
+
+		</div>
+
+
+		<div class="slide" id="pause">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text"> 
+				You have completed the first phase of the experiment. Please click next to continue.
+			</p>
+
+  			<center>
+  			<button type="button" onclick="this.blur(); questionSection.postQ1()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="postQ1">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+  			<p class="block-text">
+  				 For this next phase of the experiment, you'll be given the option to participate with <b>another person</b>.
+  			</p>
+
+  			<p class="block-text">
+  				 We are recruiting participants from various online platforms including Facebook, Google+, and Amazon Mechanical Turk.
+  			</p>
+
+  			<p class="block-text">
+  				 Click Next when you are ready to continue and we will find and connect you with another participant. Please be patient as this process may take up to one minute.
+  			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); questionSection.loadscreen()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="loadscreen">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+  			<p id = "loadElement" align="center">
+  				{{}}
+  			</p>
+		</div>
+
+
+		<div class="slide" id="choiceinfo1">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+  			<p class="block-text">
+  				 We have successfully connected you with another participant. You will now have the choice of participating with this individual.
+  			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); questionSection.choiceinfo2()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="choiceinfo2">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				If you choose to complete the task with the other participant, then you will each take turns rating images. Additionally, <b><u>you will both be able to see each other's responses.</b></u> 
+			</p>
+
+			<p class="block-text">
+				For example, if it is the other person's turn, then <b><u>you will see their rating</b></u> appear on the screen after they respond. Similarly, if it is your turn, then <b><u>they will see your rating</b></u> once you respond.
+			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); questionSection.choiceinfo3()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="choiceinfo3">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				However, you may alternatively choose to complete the task alone. In this case, <b><u>neither of you will see each other's responses.</b></u>
+			</p>
+
+			<p class="block-text">
+				Instead, you will alternate between rating images and viewing <b><u>previous participants' most common responses.</b></u> For example, you will see an image followed by <b><u>the answer most frequently provided by previous participants.</b></u>
+			</p>
+
+			<p class="block-text">
+				 These responses will not include your potential partner since they have not yet completed the experiment.
+			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); questionSection.choiceinfo4()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="choiceinfo4">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				<b><u>Please note that the other individual will complete this same task regardless of your choice.</b></u>
+			</p>
+
+			<p class="block-text">
+				Please also note that <b><u>the remainder of the experiment will take the same amount of time</b></u> regardless of your choice. You will view 40 images (of which you'll rate 20) either way.
+			</p>
+
+			<p class="block-text">
+				The only difference between the two options is whether you'll complete the experiment together or separately, i.e. <b><u>whether you'll be able to see each other's responses.</b></u>
+			</p>
+
+			<p class="block-text">
+				On the next screen you will make your selection. Please review the instructions above and click next once you are ready to proceed.
+			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); choiceSection.next()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="choice">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				Please press <b><span id="person-key">{{}}</span></b> if you wish to complete the next phase with <b>another person</b> or <b><span id="no_person-key">{{}}</span></b> if you wish to complete the next phase <b>alone</b>.
+			</p>
+		</div>
+
+
+		<div class="slide" id="postchoice">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text">
+				Thanks for your choice! We would like to ask you to complete several addional questionnaires before beginning the next phase.
+			</p>
+  			
+ 			<p class="block-text"> 
+				Please click next to continue.
+			</p>
+
+			 <center>
+  			<button type="button" onclick="this.blur(); questionSection.demo()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="demo">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text"> 
+				Please answer the following demographics questions:
+			</p>
+
+			<form>
+				<p class="block-text">
+					<b>Please enter your mTurk ID:</b><br>
+					<input type="text" name="mTurkID" id="mTurkIDtag">
+				</p>
+
+				<p class="block-text">
+					<b>Please enter your age:</b><br><input type="text" name="age" id="agetag">
+				</p>
+
+				<p class="block-text">
+					<b>Please indicate your gender:</b><br>
+					<input type="radio" name="gender" value="M">Male<br>
+					<input type="radio" name="gender" value="F">Female<br>
+					<input type="radio" name="gender" value="NA">Choose not to disclose<br>
+				</p>
+
+				<p class="block-text">
+					<b>Please indicate your racial/ethnic affiliation:</b><br>
+					<input type="radio" name="ethnicity" value="1">American Indian<br>
+					<input type="radio" name="ethnicity" value="2">East Asian<br>
+					<input type="radio" name="ethnicity" value="3">Pacific Islander<br>
+					<input type="radio" name="ethnicity" value="4">Black or African American<br>
+					<input type="radio" name="ethnicity" value="5">White or Caucasian<br>
+					<input type="radio" name="ethnicity" value="6">Hispanic or Latino/a<br>
+					<input type="radio" name="ethnicity" value="7">South Asian<br>
+					<input type="radio" name="ethnicity" value="8">Middle Eastern<br>
+					<input type="radio" name="ethnicity" value="9">Other<br>
+					<input type="radio" name="ethnicity" value="10">Mixed (more than one of the above)<br>
+					<input type="radio" name="ethnicity" value="11">Choose not to disclose<br>
+				</p>
+
+			</form>
+  			<center>
+  			<button type="button" onclick="this.blur(); if (ValidateDemo()) {questionSection.IRQ1()}">Next</button>
+  			</center>
+		</div>
+
+
+        <div class="slide" id="IRQ1">
+
+            <img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+            <p id='logo-text'>Stanford University</p>
+
+            <p class="block-text"> 
+                Although some of the following questions may seem similar to one another, they differ in important ways. Please select the option that best indicates how you feel about each statement. 
+            </p>
+
+            <form>
+
+				<p class="block-text"> 
+                    <b>1. When something bad happens, my first impulse is to seek out the company of others.</b><br>
+                    <input type="radio" name="irq_tn1" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tn1" value="2">Disagree<br>
+                    <input type="radio" name="irq_tn1" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tn1" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tn1" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tn1" value="6">Agree<br>
+                    <input type="radio" name="irq_tn1" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>2. I appreciate having others' support through difficult times.</b><br>
+                    <input type="radio" name="irq_en1" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_en1" value="2">Disagree<br>
+                    <input type="radio" name="irq_en1" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_en1" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_en1" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_en1" value="6">Agree<br>
+                    <input type="radio" name="irq_en1" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>3. When things are going well, I just have to tell other people about it.</b><br>
+                    <input type="radio" name="irq_tp1" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tp1" value="2">Disagree<br>
+                    <input type="radio" name="irq_tp1" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tp1" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tp1" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tp1" value="6">Agree<br>
+                    <input type="radio" name="irq_tp1" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>4. I'm happier when I'm with my friends than when I'm by myself. </b><br>
+                    <input type="radio" name="irq_ep1" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_ep1" value="2">Disagree<br>
+                    <input type="radio" name="irq_ep1" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_ep1" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_ep1" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_ep1" value="6">Agree<br>
+                    <input type="radio" name="irq_ep1" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>5. When I'm having trouble, I can't wait to tell someone about it. </b><br>
+                    <input type="radio" name="irq_tn2" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tn2" value="2">Disagree<br>
+                    <input type="radio" name="irq_tn2" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tn2" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tn2" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tn2" value="6">Agree<br>
+                    <input type="radio" name="irq_tn2" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>6. Sometimes I just need someone to understand where I'm coming from. </b><br>
+                    <input type="radio" name="irq_en2" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_en2" value="2">Disagree<br>
+                    <input type="radio" name="irq_en2" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_en2" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_en2" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_en2" value="6">Agree<br>
+                    <input type="radio" name="irq_en2" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>7. When something good happens, my first impulse is to tell someone about it.</b><br>
+                    <input type="radio" name="irq_tp2" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tp2" value="2">Disagree<br>
+                    <input type="radio" name="irq_tp2" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tp2" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tp2" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tp2" value="6">Agree<br>
+                    <input type="radio" name="irq_tp2" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>8. Being with other people tends to put a smile on my face. </b><br>
+                    <input type="radio" name="irq_ep2" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_ep2" value="2">Disagree<br>
+                    <input type="radio" name="irq_ep2" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_ep2" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_ep2" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_ep2" value="6">Agree<br>
+                    <input type="radio" name="irq_ep2" value="7">Strongly Agree<br>
+                </p>
+
+            </form>
+            <center>
+            <button type="button" onclick="this.blur(); if (ValidateIRQ1()) {questionSection.IRQ2()}">Next</button>
+            </center>
+        </div>
+
+
+        <div class="slide" id="IRQ2">
+
+            <img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+            <p id='logo-text'>Stanford University</p>
+
+            <form>
+
+                <p class="block-text"> 
+                    <b>9. I just have to get help from someone when things are going wrong.</b><br>
+                    <input type="radio" name="irq_tn3" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tn3" value="2">Disagree<br>
+                    <input type="radio" name="irq_tn3" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tn3" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tn3" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tn3" value="6">Agree<br>
+                    <input type="radio" name="irq_tn3" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>10. It really helps me feel better during stressful situations when someone knows and cares about what I'm going through.</b><br>
+                    <input type="radio" name="irq_en3" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_en3" value="2">Disagree<br>
+                    <input type="radio" name="irq_en3" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_en3" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_en3" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_en3" value="6">Agree<br>
+                    <input type="radio" name="irq_en3" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>11. When things are going well, I feel compelled to seek out other people.</b><br>
+                    <input type="radio" name="irq_tp3" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tp3" value="2">Disagree<br>
+                    <input type="radio" name="irq_tp3" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tp3" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tp3" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tp3" value="6">Agree<br>
+                    <input type="radio" name="irq_tp3" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>12. I find that even just being around other people can help me to feel better. </b><br>
+                    <input type="radio" name="irq_ep3" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_ep3" value="2">Disagree<br>
+                    <input type="radio" name="irq_ep3" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_ep3" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_ep3" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_ep3" value="6">Agree<br>
+                    <input type="radio" name="irq_ep3" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>13. I manage my emotions by expressing them to others. </b><br>
+                    <input type="radio" name="irq_tn4" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tn4" value="2">Disagree<br>
+                    <input type="radio" name="irq_tn4" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tn4" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tn4" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tn4" value="6">Agree<br>
+                    <input type="radio" name="irq_tn4" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>14. I really appreciate having other people to help me figure out my problems.</b><br>
+                    <input type="radio" name="irq_en4" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_en4" value="2">Disagree<br>
+                    <input type="radio" name="irq_en4" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_en4" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_en4" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_en4" value="6">Agree<br>
+                    <input type="radio" name="irq_en4" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>15. When I want to celebrate something good, I seek out certain people to tell them about it. </b><br>
+                    <input type="radio" name="irq_tp4" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_tp4" value="2">Disagree<br>
+                    <input type="radio" name="irq_tp4" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_tp4" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_tp4" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_tp4" value="6">Agree<br>
+                    <input type="radio" name="irq_tp4" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>16. I really enjoy being around the people I know. </b><br>
+                    <input type="radio" name="irq_ep4" value="1">Strongly Disagree<br>
+                    <input type="radio" name="irq_ep4" value="2">Disagree<br>
+                    <input type="radio" name="irq_ep4" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="irq_ep4" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="irq_ep4" value="5">Somewhat Agree<br>
+                    <input type="radio" name="irq_ep4" value="6">Agree<br>
+                    <input type="radio" name="irq_ep4" value="7">Strongly Agree<br>
+                </p>
+
+            </form>
+            <center>
+            <button type="button" onclick="this.blur(); if (ValidateIRQ2()) {questionSection.ERQ()}">Next</button>
+            </center>
+        </div>
+
+
+        <div class="slide" id="ERQ">
+
+            <img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+            <p id='logo-text'>Stanford University</p>
+
+            <p class="block-text"> 
+                Although some of the following questions may seem similar to one another, they differ in important ways. Please select the option that best indicates how you feel about each statement. 
+            </p>
+
+            <form>
+
+				<p class="block-text"> 
+                    <b>1. When I want to feel more positive emotion (such as joy or amusement), I change what I'm thinking about.</b><br>
+                    <input type="radio" name="erq_r1" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r1" value="2">Disagree<br>
+                    <input type="radio" name="erq_r1" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r1" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r1" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r1" value="6">Agree<br>
+                    <input type="radio" name="erq_r1" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>2. I keep my emotions to myself.</b><br>
+                    <input type="radio" name="erq_s2" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_s2" value="2">Disagree<br>
+                    <input type="radio" name="erq_s2" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_s2" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_s2" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_s2" value="6">Agree<br>
+                    <input type="radio" name="erq_s2" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>3. When I want to feel less negative emotion (such as sadness or anger), I change what I'm thinking about.</b><br>
+                    <input type="radio" name="erq_r3" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r3" value="2">Disagree<br>
+                    <input type="radio" name="erq_r3" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r3" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r3" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r3" value="6">Agree<br>
+                    <input type="radio" name="erq_r3" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>4. When I am feeling positive emotions, I am careful not to express them. </b><br>
+                    <input type="radio" name="erq_s4" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_s4" value="2">Disagree<br>
+                    <input type="radio" name="erq_s4" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_s4" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_s4" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_s4" value="6">Agree<br>
+                    <input type="radio" name="erq_s4" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>5. When I'm faced with a stressful situation, I make myself think about it in a way that helps me stay calm. </b><br>
+                    <input type="radio" name="erq_r5" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r5" value="2">Disagree<br>
+                    <input type="radio" name="erq_r5" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r5" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r5" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r5" value="6">Agree<br>
+                    <input type="radio" name="erq_r5" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>6. I control my emotions by not expressing them. </b><br>
+                    <input type="radio" name="erq_s6" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_s6" value="2">Disagree<br>
+                    <input type="radio" name="erq_s6" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_s6" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_s6" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_s6" value="6">Agree<br>
+                    <input type="radio" name="erq_s6" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>7. When I want to feel more positive emotion, I change the way I'm thinking about the situation.</b><br>
+                    <input type="radio" name="erq_r7" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r7" value="2">Disagree<br>
+                    <input type="radio" name="erq_r7" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r7" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r7" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r7" value="6">Agree<br>
+                    <input type="radio" name="erq_r7" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>8. I control my emotions by changing the way I think about the situation I'm in. </b><br>
+                    <input type="radio" name="erq_r8" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r8" value="2">Disagree<br>
+                    <input type="radio" name="erq_r8" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r8" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r8" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r8" value="6">Agree<br>
+                    <input type="radio" name="erq_r8" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>9. When I am feeling negative emotions, I make sure not to express them. </b><br>
+                    <input type="radio" name="erq_s9" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_s9" value="2">Disagree<br>
+                    <input type="radio" name="erq_s9" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_s9" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_s9" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_s9" value="6">Agree<br>
+                    <input type="radio" name="erq_s9" value="7">Strongly Agree<br>
+                </p>
+
+                <p class="block-text"> 
+                    <b>10. When I want to feel less negative emotion, I change the way I'm thinking about the situation. </b><br>
+                    <input type="radio" name="erq_r10" value="1">Strongly Disagree<br>
+                    <input type="radio" name="erq_r10" value="2">Disagree<br>
+                    <input type="radio" name="erq_r10" value="3">Somewhat Disagree<br>
+                    <input type="radio" name="erq_r10" value="4">Neither Agree nor Disagree<br>
+                    <input type="radio" name="erq_r10" value="5">Somewhat Agree<br>
+                    <input type="radio" name="erq_r10" value="6">Agree<br>
+                    <input type="radio" name="erq_r10" value="7">Strongly Agree<br>
+                </p>
+
+            </form>
+            <center>
+            <button type="button" onclick="this.blur(); if (ValidateERQ()) {questionSection.BFI_E()}">Next</button>
+            </center>
+        </div>
+
+
+		<div class="slide" id="BFI_E">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text"> 
+				Here are a number of characteristics that may or may not apply to you. Please indicate the extent to which you agree or disagree with each statement.
+			</p>
+
+			<form>
+
+				<p class="block-text"> 
+					<b>1. I am someone who is talkative.</b><br>
+					<input type="radio" name="bfi_e1" value="1">Strongly Disagree<br>
+					<input type="radio" name="bfi_e1" value="2">Disagree<br>
+					<input type="radio" name="bfi_e1" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e1" value="4">Agree<br>
+					<input type="radio" name="bfi_e1" value="5">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>2. I am someone who is reserved.</b><br>
+					<input type="radio" name="bfi_e6" value="5">Strongly Disagree<br>
+					<input type="radio" name="bfi_e6" value="4">Disagree<br>
+					<input type="radio" name="bfi_e6" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e6" value="2">Agree<br>
+					<input type="radio" name="bfi_e6" value="1">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>3. I am someone who is full of energy.</b><br>
+					<input type="radio" name="bfi_e11" value="1">Strongly Disagree<br>
+					<input type="radio" name="bfi_e11" value="2">Disagree<br>
+					<input type="radio" name="bfi_e11" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e11" value="4">Agree<br>
+					<input type="radio" name="bfi_e11" value="5">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>4. I am someone who generates a lot of enthusiasm.</b><br>
+					<input type="radio" name="bfi_e16" value="1">Strongly Disagree<br>
+					<input type="radio" name="bfi_e16" value="2">Disagree<br>
+					<input type="radio" name="bfi_e16" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e16" value="4">Agree<br>
+					<input type="radio" name="bfi_e16" value="5">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>5. I am someone who tends to be quiet.</b><br>
+					<input type="radio" name="bfi_e21" value="5">Strongly Disagree<br>
+					<input type="radio" name="bfi_e21" value="4">Disagree<br>
+					<input type="radio" name="bfi_e21" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e21" value="2">Agree<br>
+					<input type="radio" name="bfi_e21" value="1">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>6. I am someone who has an assertive personality.</b><br>
+					<input type="radio" name="bfi_e26" value="1">Strongly Disagree<br>
+					<input type="radio" name="bfi_e26" value="2">Disagree<br>
+					<input type="radio" name="bfi_e26" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e26" value="4">Agree<br>
+					<input type="radio" name="bfi_e26" value="5">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>7. I am someone who is sometimes shy, inhibited.</b><br>
+					<input type="radio" name="bfi_e31" value="5">Strongly Disagree<br>
+					<input type="radio" name="bfi_e31" value="4">Disagree<br>
+					<input type="radio" name="bfi_e31" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e31" value="2">Agree<br>
+					<input type="radio" name="bfi_e31" value="1">Strongly Agree<br>
+				</p>
+
+				<p class="block-text"> 
+					<b>8. I am someone who is outgoing, sociable.</b><br>
+					<input type="radio" name="bfi_e36" value="1">Strongly Disagree<br>
+					<input type="radio" name="bfi_e36" value="2">Disagree<br>
+					<input type="radio" name="bfi_e36" value="3">Neither Agree nor Disagree<br>
+					<input type="radio" name="bfi_e36" value="4">Agree<br>
+					<input type="radio" name="bfi_e36" value="5">Strongly Agree<br>
+				</p>
+
+            </form>
+            <center>
+            <button type="button" onclick="this.blur(); if (ValidateBFI_E()) {questionSection.funnel1()}">Next</button>
+            </center>
+        </div>
+
+
+		<div class="slide" id="funnel1">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<form>
+
+				<p class="block-text"> 
+					Thank you for completing the questionnaires! Before you begin the next phase, we'd like to ask you just a few questions about your experience of the task thus far. 
+				</p>
+
+				<p class="block-text"> 
+					Note that your answers to these questions will not have any negative consequences for you, so please answer honestly.
+				</p>
+
+				<p class="block-text"> 
+					First, please briefly state what you believe this experiment may be about.
+				</p>
+
+				<p class="block-text">
+					<textarea name="task3_about" id="task3_aboutTag" rows="10" cols="50"></textarea>
+				</p>
+
+			</form>
+  			<center>
+  			<button type="button" onclick="this.blur(); if (ValidateFunnel1()) {questionSection.funnel2()}">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="funnel2">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<form>
+
+				<p class="block-text"> 
+					Do you find anything suspicious or surprising about this study?
+				</p>
+
+				<p class="block-text">
+					<textarea name="task3_suspect" id="task3_suspectTag" rows="10" cols="50"></textarea>
+				</p>
+
+			</form>
+  			<center>
+  			<button type="button" onclick="this.blur(); if (ValidateFunnel2()) {questionSection.funnel3()}">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="funnel3">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<form>
+
+				<p class="block-text"> 
+					<b>At the time of your choice,</b> did you believe that you had the option of participating with another person? Please explain why or why not.
+				</p>
+
+				<p class="block-text"> 
+					<input type="radio" name="task3_check" value="1"><b>Yes</b> - I believed I could participate with another person.<br>
+					<input type="radio" name="task3_check" value="0"><b>No</b> - I did not believe I could participate with another person.<br>
+				</p>
+
+				<p class="block-text">
+					<textarea name="task3_belief" id="task3_beliefTag" rows="10" cols="50"></textarea>
+				</p>
+
+			</form>
+  			<center>
+  			<button type="button" onclick="this.blur(); if (ValidateFunnel3()) {questionSection.debrief1()}">Next</button>
+  			</center>
+		</div>
+
+		<div class="slide" id="debrief1">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text"> 
+				Thank you for completing the questionnaires! As you may know, sometimes scientific methods require that participants in psychology experiments not be given complete information about the set-up of the experiment until after the experiment is completed. 
+			</p>
+
+			<p class="block-text"> 
+				So even though we cannot always tell you everything "up front," we are absolutely sure to tell you everything when the experiment is completed.
+			</p>
+
+			<p class="block-text"> 
+				We told you earlier that you would be given the option of completing a second phase of this task with another person when this was not the case.  
+			</p>
+
+			<p class="block-text"> 
+				Why did we lie about this? We are studying the impact of emotional factors on affiliation. Therefore, it was important that you believed you had the option of sharing the next phase of the experiment with another person.
+			</p>
+
+  			<center>
+  			<button type="button" onclick="this.blur(); questionSection.debrief2()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="debrief2">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<p class="block-text"> 
+				We apologize for having subjected you to this deception, even if it was a minor one, and we appreciate your willingness to participate in this study in order to help us with our research. 
+			</p>
+
+			<p class="block-text"> 
+				Your feelings are very important to us, and we truly hope you understand why we felt it necessary to deceive you for a few minutes. We did this in the spirit of acquiring important scientific information about human behavior. 
+			</p>
+
+			<p class="block-text"> 
+				Whether our hypothesis is confirmed or disconfirmed, your participation has helped us learn something important about people and how they think. We are very grateful that you decided to help us today. Thank you.
+			</p>
+
+  			<center>
+  			<button type="button" onclick="this.blur(); questionSection.debrief3()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="debrief3">
+
+ 			<img src="http://www.stanford.edu/~wcwill/stanford.png" alt="Stanford University">
+    		<p id='logo-text'>Stanford University</p>
+
+			<form>
+
+			<p class="block-text"> 
+				We do have one important request - that you do not discuss the details of this experiment with other individuals who may be participants. If other individuals were to complete the experiment with prior knowledge of the deception, it could invalidate our results.
+			</p>
+
+			<p class="block-text"> 
+				Finally, please leave us any comments or suggestions you may have on the experiment. Thank you again for your participation!
+			</p>
+			
+			<p class="block-text"> 
+					<textarea name="comments" id="commentsTag" rows="10" cols="50"></textarea>
+			</p>
+
+			</form>
+  			<center>
+  			<button type="button" onclick="this.blur(); questionSection.end()">Next</button>
+  			</center>
+		</div>
+
+
+		<div class="slide" id="finished">
+
+  			<p class="block-text">
+  				You're finished - thanks for participating! Submitting to Mechanical Turk...
+  			</p>
+
+		</div>
+
+		<script src="IRQ_preval_TN.js"></script>
+
+	</body>
+
+</html>
