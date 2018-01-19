@@ -14,6 +14,6 @@ Data from all experiments are available as .csv files here:
   - [Study 3 (negative)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study3_negative/data)
   - [Study 3 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study3_positive/data)
   - [Study 4 (negative)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_negative/data)
-  - Study 4 (negative) replication
+  - [Study 4 (negative) replication](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_negative_replication/data)
   - Study 4 (positive)
   - Study 5
