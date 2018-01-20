@@ -6,7 +6,7 @@ Williams, W.C., Morelli, S.A., Ong, D.C., & Zaki, J. (in press). Interpersonal e
 
 This repository is maintained by W. Craig Williams. Feel free to contact me with any questions, comments, or requests at wcwill (at) alumni (dot) stanford (dot) edu.
 
-### Data
+## Data
 
 Data from all experiments are available as .csv files here:
   - [Study 1](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study1/data)
@@ -18,7 +18,7 @@ Data from all experiments are available as .csv files here:
   - [Study 4 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_positive/data)
   - [Study 5](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study5/data)
 
-### Analysis scripts
+## Analysis scripts
 
 Scripts for analyzing data and generating plots are available as .R files here:
   - [Study 1](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study1/scripts)
@@ -30,7 +30,7 @@ Scripts for analyzing data and generating plots are available as .R files here:
   - [Study 4 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_positive/scripts)
   - [Study 5](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study5/scripts)
 
-### Task code
+## Task code
 
 Code for conducting the experiments described in Study 3 is available as HTML, JavaScript, and CSS files here:
   - [Study 3 (negative)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study3_negative/task)
