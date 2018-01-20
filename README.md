@@ -30,6 +30,14 @@ Scripts for analyzing data and generating plots are available as .R files here:
   - [Study 4 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_positive/scripts)
   - [Study 5](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study5/scripts)
 
+## Plots
+
+Data plots made in ggplot are avaiable as .pdf files here:
+  - [Study 3 (negative)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study3_negative/plots)
+  - [Study 3 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study3_positive/plots)
+  - [Study 4 (negative)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_negative/plots)
+  - [Study 4 (positive)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/tree/master/study4_positive/plots)
+
 ## Task code
 
 Code for conducting the experiments described in Study 3 is available as HTML, JavaScript, and CSS files here:
