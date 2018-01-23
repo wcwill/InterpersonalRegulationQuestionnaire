@@ -1,6 +1,6 @@
 # Interpersonal Regulation Questionnaire (IRQ)
 
-[This Github repository](https://github.com/wcwill/InterpersonalRegulationQuestionnaire) contains the [Interpersonal Regulation Questionnaire (IRQ)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/blob/master/IRQ_01_2018.pdf) and materials for the following paper ([manuscript](http://ssnl.stanford.edu/download/file/fid/756) and [supplemental materials](http://ssnl.stanford.edu/sites/default/files/data/IRQ.zip)):
+[This Github repository](https://github.com/wcwill/InterpersonalRegulationQuestionnaire) contains the [Interpersonal Regulation Questionnaire (IRQ)](https://github.com/wcwill/InterpersonalRegulationQuestionnaire/blob/master/IRQ_01_2018.pdf) and materials for the following paper (see [manuscript](http://ssnl.stanford.edu/download/file/fid/756) and [supplemental materials](http://ssnl.stanford.edu/sites/default/files/data/IRQ.zip)):
 
 Williams, W.C., Morelli, S.A., Ong, D.C., & Zaki, J. (in press). Interpersonal emotion regulation: Implications for affiliation, perceived support, relationships, and well-being. <i>Journal of Personality and Social Psychology.</i>
 
